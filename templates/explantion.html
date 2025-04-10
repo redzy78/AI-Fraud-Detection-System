@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction Explanation</title>
+</head>
+<body>
+    <h1>Fraud Explanation for Transaction {{ transaction.TransactionID }}</h1>
+    
+    <h2>Transaction Details</h2>
+    <p>Amount: {{ transaction.TransactionAmount }}</p>
+    <p>Occupation: {{ transaction.CustomerOccupation }}</p>
+    <p>Login Attempts: {{ transaction.LoginAttempts }}</p>
+    
+    <h2>SHAP Explanation</h2>
+    <img src="data:image/png;base64,{{ shap_plot }}" alt="SHAP Explanation">
+    
+    <a href="/upload">Back to results</a>
+</body>
+</html>
